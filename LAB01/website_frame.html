@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab01</title>
+    <link rel="stylesheet" href="lab1_style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <script src="../test/changing_button.js"></script>
+</head>
+<body>
+<div id="header">
+    <h1 class="header__title">Королев Денис Владимирович, P32141, Вариант 1510</h1>
+    <div id = "logo">
+    <img src="itmo.png" alt="">
+    </div>
+</div>
+<div id="site_view">
+    <div id = "sidebar">
+        <div id = "duck">
+            <img style="top: 110px;" src="left_duck.png" alt="">
+            <img style="top: 210px;" src="right_duck.png" alt="">
+            <img style="top: 310px;" src="left_duck.png" alt="">
+            <img style="top: 410px;" src="right_duck.png" alt="">
+            <img style="top: 510px;" src="left_duck.png" alt="">
+            <img style="top: 610px;" src="right_duck.png" alt="">
+            <img style="top: 710px;" src="left_duck.png" alt="">
+            <img style="top: 810px;" src="right_duck.png" alt="">
+            <img style="top: 910px;" src="left_duck.png" alt="">
+            <img style="top: 1010px;" src="right_duck.png" alt="">
+            <img style="top: 1110px;" src="left_duck.png" alt="">
+            <img style="top: 1210px;" src="right_duck.png" alt="">
+            <img style="top: 1310px;" src="left_duck.png" alt="">
+            <img style="top: 1410px;" src="right_duck.png" alt="">
+        </div>
+    </div>
+    <div id = "container">
+        <div id = "chart_bar">
+            <svg viewBox="0 0 600 600" width=100% height=98%>
+                <path d="M 300 300
+                            L 500 300
+                            L 300 200
+                            L 300 100
+                            L 200 100
+                            L 200 300
+                            A 100 100 0 0 0 300 400"
+                      fill="rgb(238, 130, 238)"></path>
+                <line x1="300" y1="4" x2="300" y2="600" style="stroke: black; stroke-width: 3"/>
+                <text x="315" y="14">y</text>
+                <line x1="0" y1="300" x2="597" y2="300" style="stroke: black; stroke-width: 3"/>
+                <text x="586" y="287">x</text>
+                <line x1="100" y1="295" x2="100" y2="305" style="stroke: black; stroke-width: 3"/>
+                <text y="290" x="90">-R</text>
+                <line x1="200" y1="295" x2="200" y2="305" style="stroke: black; stroke-width: 3"/>
+                <text y="290" x="188">-R/2</text>
+                <line x1="400" y1="295" x2="400" y2="305" style="stroke: black; stroke-width: 3"/>
+                <text y="290" x="388">R/2</text>
+                <line x1="500" y1="295" x2="500" y2="305" style="stroke: black; stroke-width: 3"/>
+                <text y="290" x="492">R</text>
+                <line y1="100" x1="295" y2="100" x2="305" style="stroke: black; stroke-width: 3"/>
+                <text y="107" x="310">R</text>
+                <line y1="200" x1="295" y2="200" x2="305" style="stroke: black; stroke-width: 3"/>
+                <text y="207" x="310">R/2</text>
+                <line y1="400" x1="295" y2="400" x2="305" style="stroke: black; stroke-width: 3"/>
+                <text y="407" x="310">-R/2</text>
+                <line y1="500" x1="295" y2="500" x2="305" style="stroke: black; stroke-width: 3"/>
+                <text y="507" x="310">-R</text>
+                <polygon points="300,0 290,20 300,14 310,20"/>
+                <polygon points="600,300 580,290 586,300 580,310 "/>
+            </svg>
+        </div>
+        <div id="results">
+            <form method="post" action="action.php" onsubmit="return isCorrect()">
+                <div class="data">
+                    X:
+                    <button type="button" id="btn-3" onclick="chooseX(this)" value="-3">-3</button>
+                    <button type="button" id="btn-2" onclick="chooseX(this)" value="-2">-2</button>
+                    <button type="button" id="btn-1" onclick="chooseX(this)" value="-1">-1</button>
+                    <button type="button" id="btn0" onclick="chooseX(this)" value="0">0</button>
+                    <button type="button" id="btn1" onclick="chooseX(this)" value="1">1</button>
+                    <button type="button" id="btn2" onclick="chooseX(this)" value="2">2</button>
+                    <button type="button" id="btn3" onclick="chooseX(this)" value="3">3</button>
+                    <button type="button" id="btn4" onclick="chooseX(this)" value="4">4</button>
+                    <button type="button" id="btn5" onclick="chooseX(this)" value="5">5</button>
+                    <input type="hidden" name="x" id="chosen-button">
+                    <br>
+                    Y:
+                    <label><input type="text" placeholder="число от -3 до 5" maxlength="12" oninput="validateY()" required id="y" name="y" ></label>
+                    <span id="y-warning" style="display: none"></span>
+                    <br>
+                    R:
+                    <label><input type="text" placeholder="число от 1 до 4" maxlength="12" oninput="validateR()" required id="r" name="r" ></label>
+                    <span id="r-warning" style="display: none"></span>
+                    <br>
+                </div>
+                <input size="123" type="submit" id="submit">
+            </form>
+        </div>
+    </div>
+</div>
+<script src="validation.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</body>
+</html>

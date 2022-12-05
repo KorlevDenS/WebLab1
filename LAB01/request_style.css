@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 1520px;
+    height: 1406px;
+    position: absolute;
+}
+
+#result {
+    height: 1406px;
+    background: url("bachground.png") no-repeat;
+}
+
+table {
+    position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-size: larger;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+
+    text-align: center;
+    border-collapse: collapse;
+    border-top: 10px ridge mediumblue;
+    border-bottom: 10px ridge mediumblue;
+    border-right: 10px ridge mediumblue;
+    border-left: 10px ridge mediumblue;
+}
